@@ -73,7 +73,7 @@ const projects = [
             "Developing server-side role based authentication by validating Auth0 roles.",
             "Implementing responsive design to all platforms including phone, tablet, and other nonstandard displays, keeping all functionalities and features using MaterialUI and BootStrap.",
         ],
-        photo: "",
+        photo: "photos/Projects/7Factor.jpg",
         used: []
     },
     {
@@ -86,7 +86,7 @@ const projects = [
             "Designed and implemented backend API’s and integrated frontend with the APIs.",
             "Increased test coverage of features by writing testable code and Junit tests.",
         ],
-        photo: "",
+        photo: "photos/Projects/hospital.jpg",
         used: ["Java", "JavaFX", "Scene Builder", "Git", "SQL", "MongoDB"]
     },
     {
@@ -99,7 +99,7 @@ const projects = [
             "Connected the MongoDB database to store all data of each user.",
             "Designed the User Interface using HTML, CSS, JavaScript, BootStrap, and React.",
         ],
-        photo: "",
+        photo: "photos/Projects/github.png",
         used: ["JavaScript", "HTML", "CSS", "BootStrap", "React", "NodeJS", "Express"]
     },
     {
@@ -107,7 +107,7 @@ const projects = [
         link: "",
         code: "",
         description: [],
-        photo: "",
+        photo: "photos/Projects/portfolio.jpg",
         used: ["JavaScript", "HTML", "CSS", "BootStrap", "NodeJS", "Express"]
     },
     {
@@ -115,7 +115,7 @@ const projects = [
         link: "",
         code: "",
         description: [],
-        photo: "",
+        photo: "photos/Projects/iqp.jpg",
         used: []
     },
     {
@@ -123,8 +123,96 @@ const projects = [
         link: "",
         code: "",
         description: [],
-        photo: "",
+        photo: "photos/Projects/world.jpg",
         used: []
+    },
+]
+
+const courses = [
+    {
+        courseNumber: "CS1101",
+        name: "Introduction To Program Design",
+        date: "2019 A-Term"
+    },
+    {
+        courseNumber: "CS2102",
+        name: "Object-Oriented Design Concepts",
+        date: "2019 B-Term"
+    },
+    {
+        courseNumber: "CS2303",
+        name: "Systems Programming Concepts",
+        date: "2020 C-Term"
+    },
+    {
+        courseNumber: "CS2011",
+        name: "Introduction To Machine Organization And Assembly Language",
+        date: "2020 B-Term"
+    },
+    {
+        courseNumber: "CS3133",
+        name: "Foundations Of Computer Science",
+        date: "2021 C-Term"
+    },
+    {
+        courseNumber: "CS3043",
+        name: "Social Implications Of Information Processing",
+        date: "2021 B-Term"
+    },
+    {
+        courseNumber: "CS3733",
+        name: "Software Engineering",
+        date: "2022 C-Term"
+    },
+    {
+        courseNumber: "CS2223",
+        name: "Algorithms",
+        date: "2022 D-Term"
+    },
+    {
+        courseNumber: "CS3516",
+        name: "Computer Networks",
+        date: "2022 D-Term"
+    },
+    {
+        courseNumber: "CS4432",
+        name: "Database Systems II",
+        date: "2022 D-Term"
+    },
+    {
+        courseNumber: "CS3013",
+        name: "Operating Systems",
+        date: "2022 A-Term"
+    },
+    {
+        courseNumber: "CS4241",
+        name: "Webware: Computational Technology For Network Information Systems",
+        date: "2022 A-Term"
+    },
+    {
+        courseNumber: "CS3041",
+        name: "Human-Computer Interaction",
+        date: "2022 B-Term"
+    },
+    {
+        courseNumber: "CS4342",
+        name: "Machine Learning",
+        date: "2022 B-Term"
+    },
+    {
+        courseNumber: "Major Qualifying Project (MQP)",
+        name: "7Factor Staffing Tool Platform",
+        date: "2022 A-Term - 2022 C-Term"
+    },
+    {
+        courseNumber: "CS4233",
+        name: "Object-Oriented Analysis And Design",
+        date: "2023 C-Term"
+    },
+    {
+        courseNumber: "CS4341",
+        name: "Introduction To Artificial Intelligence",
+        date: "2023 C-Term"
     },
 
 
@@ -159,6 +247,16 @@ client.connect()
 
     .then( () => {
         return (client.db("Portfolio").collection("Projects"));
+    })
+    .then( __account => {
+        account = __account;
+        // blank query returns all documents
+        return account.find({ }).toArray()
+    })
+    .then( console.log )
+
+    .then( () => {
+        return (client.db("Portfolio").collection("Courses"));
     })
     .then( __account => {
         account = __account;
@@ -213,11 +311,25 @@ app.get('/starting', (req, res) => {
         }
     })
 
+    client.db("Portfolio").collection("Courses").countDocuments({}).then((count_documents) => {
+        console.log(count_documents);
+
+        if (count_documents === 0){
+            client.db("Portfolio").collection("Courses").insertMany(courses).then(result => console.log(result));
+        }
+        else {
+        }
+    })
+
 
 })
 
 app.get('/getProjects', (req, res) => {
     (client.db("Portfolio").collection("Projects").find({}).toArray()).then(result => res.json(result));
+})
+
+app.get('/getCourses', (req, res) => {
+    (client.db("Portfolio").collection("Courses").find({}).toArray()).then(result => res.json(result));
 })
 
 

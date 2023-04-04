@@ -3,48 +3,196 @@
     <head>
         <meta charset="utf-8" />
         <title>About Myself</title>
-        <link rel="stylesheet" href="../public/styles.css">
+        <link rel="stylesheet" href="/courses.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
 <body>
-        <div class="container">
-            <!-- Navigation Bar-->
-            <div class="navigation-bar">
-                <div class="left">
-                    <div class="navigation-link" active-navigation>
-                        <a href="index.html">Home</a>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark p-3">
+<!--     //navbar-light bg-info-->
+     <div class="container-fluid">
+         <a class="navbar-brand" href="#">Nicholas Li</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+             <ul class="navbar-nav ms-auto ">
+                 <li class="nav-item">
+                     <a class="nav-link mx-2 "  href="/index.html">Home</a>
+<!--                     aria-current="page"-->
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link mx-2" href="/about.html">Profile</a>
+                 </li>
+
+                 <li class="nav-item dropdown">
+                     <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         About Myself
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                         <li><a class="dropdown-item" href="/Education.html">Education</a></li>
+                         <li><a class="dropdown-item" href="/Experience.html">Experience</a></li>
+                         <li><a class="dropdown-item" href="/Projects.html">Projects</a></li>
+                         <li><a class="dropdown-item" href="/Related_Courses.html">Related Course</a></li>
+                         <li><a class="dropdown-item" href="/Skills.html">Skills</a></li>
+                     </ul>
+                 </li>
+
+                 <li class="nav-item dropdown">
+                     <a class="nav-link mx-2 dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         Contact Me
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                         <li><a class="dropdown-item" href="https://github.com/Livingwell088" > <img src="/photos/Nav/github.svg"> Github</a></li>
+                         <li><a class="dropdown-item" href="https://livingwell088.github.io/"> <img src="/photos/Nav/portfolio.svg"> Portfolio</a></li>
+                         <li><a class="dropdown-item" href="https://www.linkedin.com/in/nicholas-li-781017193/"> <img src="/photos/Nav/linkedin.svg"> "LinkedIn"</a></li>
+                     </ul>
+                 </li>
+             </ul>
+         </div>
+     </div>
+ </nav>
+
+<!--<div class="timeline">-->
+<!--    <div class="events">-->
+<!--        <ol>-->
+<!--            <ul>-->
+<!--                <li>-->
+<!--                    <a href="#0" class="selected">Early Life</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="#1">Career</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="#2">Philosophy</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="#3">Legacy</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </ol>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="events-content">-->
+<!--    <ol>-->
+<!--        <li id="0" class="selected">-->
+<!--            <h2>Early Life &amp; Education</h2>-->
+<!--            <p>hello world</p>-->
+<!--        </li>-->
+
+<!--        <li id="1">-->
+<!--            <h2>Career</h2>-->
+<!--            <p>new york times</p>-->
+<!--        </li>-->
+
+<!--        <li id="2">-->
+<!--            <h2>Philosophy</h2>-->
+<!--            <p>here</p>-->
+<!--        </li>-->
+
+<!--        <li id="3">-->
+<!--            <h2>Legacy</h2>-->
+<!--            <p>after</p>-->
+<!--        </li>-->
+<!--    </ol>-->
+<!--</div>-->
+
+<div class="container-fluid py-5">
+
+    <div class="row">
+<!--        <div class="col-lg-12">-->
+
+<!--            <div class="horizontal-timeline">-->
+
+<!--                <ul class="list-inline items">-->
+<!--                    <li class="list-inline-item items-list" id="freshman">-->
+<!--                        <div class="event-date badge bg-info" >2019-2020 (Freshman)</div>-->
+
+<!--                    </li>-->
+<!--                    <li class="list-inline-item items-list" id="sophomore">-->
+<!--                        <div class="event-date badge bg-info" >2020-2021 (Sophomore)</div>-->
+
+<!--                    </li>-->
+<!--                    <li class="list-inline-item items-list" id="junior">-->
+<!--                        <div class="event-date badge bg-info" >2021-2022 (Junior)</div>-->
+
+<!--                    </li>-->
+<!--                    <li class="list-inline-item items-list" id="senior">-->
+<!--                        <div class="event-date badge bg-info" >2022-2023 (Senior)</div>-->
+
+<!--                    </li>-->
+<!--                </ul>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+        <div class="col-3">
+            <div class="card" id="freshman_card">
+                <div class="card-body">
+                    <h4 class="card-title">Freshman Year</h4>
+                    <img class="card-img" src="/photos/Courses/freshman.JPG">
+                    <ul id="freshman" class="nobullet">
+
+                    </ul>
                 </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" id="sophomore_card">
+                <div class="card-body">
+                    <h4 class="card-title">Sophomore Year</h4>
+                    <img class="card-img" src="/photos/Courses/sophomore.JPG">
+                    <ul id="sophomore" class="nobullet">
 
-                <div class="navigation-link">
-                    <a href="about.html">About Me</a>
+                    </ul>
                 </div>
-            
+            </div>
         </div>
+        <div class="col-3">
+            <div class="card" id="junior_card">
+                <div class="card-body">
+                    <h4 class="card-title">Junior Year</h4>
+                    <img class="card-img" src="/photos/Courses/junior.JPG">
+                    <ul id="junior" class="nobullet">
 
-            <div class="right">
-                <div>Nicholas Li</div>
-            </div>       
+                    </ul>
+                </div>
+            </div>
         </div>
-    
+        <div class="col-3">
+            <div class="card" id="senior_card">
+                <div class="card-body">
+                    <h4 class="card-title">Senior Year</h4>
+                    <img class="card-img" src="/photos/Courses/senior.JPG">
+                    <ul id="senior" class="nobullet">
 
-    <div class="content">
-        
-
-        <div class="profile-content">
-            
-            <h3>Introduction to Program Design |2019</h3>
-            <h3>Object-Oriented Design Concepts | 2020</h3>
-            <h3>Systems Programming Concepts | 2020</h3>
-            <h3>Introduction To Machine Organization And Assembly Language | 2020</h3>
-            <h3>Foundations of Computer Science | 2021</h3>
-            <h3>Social Implications of Computer Science | 2021</h3>
-            <h3>Software Engineering | 2022</h3>
-            <h3>Operating Systems | 2022</h3>
-            <h3>Algorithms | 2022</h3>
-            
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
+
 </div>
-</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Course #</th>
+        <th scope="col">Course Name</th>
+        <th scope="col">Date Taken</th>
+    </tr>
+    </thead>
+
+    <tbody id="tbody">
+    </tbody>
+</table>
+
+
+</body>
+    <script src="/courses.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
 </html>
