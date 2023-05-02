@@ -1,0 +1,36 @@
+/*#github{*/
+/*    fill: white;*/
+/*}*/
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#test {
+    margin-top: 50%;
+    /*margin-bottom: auto;*/
+}
+
+.carousel-caption {
+    top: 10%;
+    bottom: auto;
+}
+
+#corou {
+    position:absolute;
+    width:100%;
+    top:0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+#navbar{
+    z-index:9;
+}
+
+
