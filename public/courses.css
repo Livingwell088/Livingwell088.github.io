@@ -124,6 +124,7 @@
     /*vertical-align: top;*/
 }
 
+
 ul.nobullet {
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */

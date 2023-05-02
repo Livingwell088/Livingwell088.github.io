@@ -27,6 +27,17 @@ const education = [
 
 const experiences = [
     {
+        num: 1,
+        company: "Ming House",
+        position: "Restaurant Manager",
+        start: "August 2022",
+        end: "Present",
+        objectives: [],
+        accomplishments: [],
+        photo: "",
+    },
+    {
+        num: 2,
         company: "Shaw Industries",
         position: "Software Engineer Intern/Co-op",
         start: "May 2022",
@@ -42,16 +53,7 @@ const experiences = [
         photo: "",
     },
     {
-        company: "Ming House",
-        position: "Restaurant Manager",
-        start: "October 2018",
-        end: "Present",
-        objectives: [],
-        accomplishments: [],
-        photo: "",
-
-    },
-    {
+        num: 3,
         company: "ASSISTments",
         position: "Student Content Builder",
         start: "August 2019",
@@ -60,6 +62,16 @@ const experiences = [
         accomplishments: [],
         photo: "",
 
+    },
+    {
+        num: 4,
+        company: "Ming House",
+        position: "Restaurant Manager",
+        start: "October 2018",
+        end: "May 2022",
+        objectives: [],
+        accomplishments: [],
+        photo: "",
     }
 ]
 
@@ -329,7 +341,11 @@ app.get('/getProjects', (req, res) => {
 })
 
 app.get('/getCourses', (req, res) => {
-    (client.db("Portfolio").collection("Courses").find({}).toArray()).then(result => res.json(result));
+    (client.db("Portfolio").collection("Courses").find({}).sort({_id: 1}).toArray()).then(result => res.json(result));
+})
+
+app.get('/getExperiences', (req, res) => {
+    (client.db("Portfolio").collection("Experiences").find({}).sort({num: 1}).toArray()).then(result => res.json(result));
 })
 
 
