@@ -1,44 +1,131 @@
+
+const courses = [
+    {
+        courseNumber: "CS1101",
+        name: "Introduction To Program Design",
+        date: "2019 A-Term"
+    },
+    {
+        courseNumber: "CS2102",
+        name: "Object-Oriented Design Concepts",
+        date: "2019 B-Term"
+    },
+    {
+        courseNumber: "CS2303",
+        name: "Systems Programming Concepts",
+        date: "2020 C-Term"
+    },
+    {
+        courseNumber: "CS2011",
+        name: "Introduction To Machine Organization And Assembly Language",
+        date: "2020 B-Term"
+    },
+    {
+        courseNumber: "CS3133",
+        name: "Foundations Of Computer Science",
+        date: "2021 C-Term"
+    },
+    {
+        courseNumber: "CS3043",
+        name: "Social Implications Of Information Processing",
+        date: "2021 B-Term"
+    },
+    {
+        courseNumber: "CS3733",
+        name: "Software Engineering",
+        date: "2022 C-Term"
+    },
+    {
+        courseNumber: "CS2223",
+        name: "Algorithms",
+        date: "2022 D-Term"
+    },
+    {
+        courseNumber: "CS3516",
+        name: "Computer Networks",
+        date: "2022 D-Term"
+    },
+    {
+        courseNumber: "CS4432",
+        name: "Database Systems II",
+        date: "2022 D-Term"
+    },
+    {
+        courseNumber: "CS3013",
+        name: "Operating Systems",
+        date: "2022 A-Term"
+    },
+    {
+        courseNumber: "CS4241",
+        name: "Webware: Computational Technology For Network Information Systems",
+        date: "2022 A-Term"
+    },
+    {
+        courseNumber: "CS3041",
+        name: "Human-Computer Interaction",
+        date: "2022 B-Term"
+    },
+    {
+        courseNumber: "CS4342",
+        name: "Machine Learning",
+        date: "2022 B-Term"
+    },
+    {
+        courseNumber: "Major Qualifying Project (MQP)",
+        name: "7Factor Staffing Tool Platform",
+        date: "2022 A-Term - 2022 C-Term"
+    },
+    {
+        courseNumber: "CS4233",
+        name: "Object-Oriented Analysis And Design",
+        date: "2023 C-Term"
+    },
+    {
+        courseNumber: "CS4341",
+        name: "Introduction To Artificial Intelligence",
+        date: "2023 C-Term"
+    },
+
+
+]
+
+
 window.onload = function (){
-    fetch('/getCourses', {
-        method: 'GET',
-        headers: {'Content-Type': 'application/json'}
-    })
-        .then(response => (response.json()))
-        .then((json) => {
-            json.forEach((item) => {
-                console.log(item);
+    for (let i = 0; i < courses.length; i++){
+        let item = courses[i];
 
-                let tbody = document.getElementById("tbody");
+        console.log(item);
 
-                let tr = document.createElement("tr");
+        let tbody = document.getElementById("tbody");
 
-                let courseNum = document.createElement("th");
-                courseNum.scope = "row";
-                courseNum.innerHTML = item.courseNumber;
+        let tr = document.createElement("tr");
 
-                let name = document.createElement("td");
-                name.innerHTML = item.name;
+        let courseNum = document.createElement("th");
+        courseNum.scope = "row";
+        courseNum.innerHTML = item.courseNumber;
 
-                let date = document.createElement("td");
-                date.innerHTML = item.date;
+        let name = document.createElement("td");
+        name.innerHTML = item.name;
 
-                tr.appendChild(courseNum);
-                tr.appendChild(name);
-                tr.appendChild(date);
+        let date = document.createElement("td");
+        date.innerHTML = item.date;
 
-                tbody.appendChild(tr);
+        tr.appendChild(courseNum);
+        tr.appendChild(name);
+        tr.appendChild(date);
 
-                let year = yearTaken(item.date);
-                let col = document.getElementById(year);
+        tbody.appendChild(tr);
 
-                let current = document.createElement("li");
-                current.innerHTML = item.courseNumber;
+        let year = yearTaken(item.date);
+        let col = document.getElementById(year);
+
+        let current = document.createElement("li");
+        current.innerHTML = item.courseNumber;
 
 
-                col.appendChild(current);
+        col.appendChild(current);
 
-        })
-})
+    }
 }
 
 
