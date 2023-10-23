@@ -91,41 +91,42 @@ const courses = [
 
 
 window.onload = function (){
-    for (let i = 0; i < courses.length; i++){
-        let item = courses[i];
-
-        console.log(item);
-
-        let tbody = document.getElementById("tbody");
-
-        let tr = document.createElement("tr");
-
-        let courseNum = document.createElement("th");
-        courseNum.scope = "row";
-        courseNum.innerHTML = item.courseNumber;
-
-        let name = document.createElement("td");
-        name.innerHTML = item.name;
-
-        let date = document.createElement("td");
-        date.innerHTML = item.date;
-
-        tr.appendChild(courseNum);
-        tr.appendChild(name);
-        tr.appendChild(date);
-
-        tbody.appendChild(tr);
-
-        let year = yearTaken(item.date);
-        let col = document.getElementById(year);
-
-        let current = document.createElement("li");
-        current.innerHTML = item.courseNumber;
-
-
-        col.appendChild(current);
-
-    }
+    console.log("Window loading");
+    // for (let i = 0; i < courses.length; i++){
+    //     let item = courses[i];
+    //
+    //     console.log(item);
+    //
+    //     let tbody = document.getElementById("tbody");
+    //
+    //     let tr = document.createElement("tr");
+    //
+    //     let courseNum = document.createElement("th");
+    //     courseNum.scope = "row";
+    //     courseNum.innerHTML = item.courseNumber;
+    //
+    //     let name = document.createElement("td");
+    //     name.innerHTML = item.name;
+    //
+    //     let date = document.createElement("td");
+    //     date.innerHTML = item.date;
+    //
+    //     tr.appendChild(courseNum);
+    //     tr.appendChild(name);
+    //     tr.appendChild(date);
+    //
+    //     tbody.appendChild(tr);
+    //
+    //     let year = yearTaken(item.date);
+    //     let col = document.getElementById(year);
+    //
+    //     let current = document.createElement("li");
+    //     current.innerHTML = item.courseNumber;
+    //
+    //
+    //     col.appendChild(current);
+    //
+    // }
 }
 
 
