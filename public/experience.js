@@ -71,6 +71,7 @@ window.onload = function (){
 
         let card_body = document.createElement("div");
         card_body.className = "card-body p-4";
+        card_body.style.textAlign = "left"
 
         let title = document.createElement("h3");
         title.innerHTML = item.company;
@@ -81,11 +82,12 @@ window.onload = function (){
         let obj = document.createElement("div");
         let acc = document.createElement("div");
 
-        obj.className = "card";
+        obj.className = "card test";
         obj.style.width = "80%";
         obj.style.textAlign = "left";
+        card.style.marginBottom = "5vh";
 
-        acc.className = "card";
+        acc.className = "card test";
         acc.style.width = "80%";
         acc.style.textAlign = "left";
 
@@ -126,8 +128,23 @@ window.onload = function (){
 
         card.appendChild(card_body);
 
-        card.appendChild(obj);
-        card.appendChild(acc);
+        let row = document.createElement("div")
+        row.className = "row"
+
+        let col1 = document.createElement("div")
+        col1.className = "col"
+
+        let col2 = document.createElement("div")
+        col2.className = "col"
+
+        col1.appendChild(obj)
+        col2.appendChild(acc)
+        row.appendChild(col1)
+        row.appendChild(col2)
+
+
+        card.appendChild(row);
+        // card.appendChild(acc);
 
         timeline.appendChild(card);
 
