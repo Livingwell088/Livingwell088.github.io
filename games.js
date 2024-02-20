@@ -3,11 +3,25 @@ let number1 = 0;
 let number2 = null;
 
 let target = null;
+let steps = 0;
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+function reset1() {
+    console.log("Working")
+    document.getElementById("ans").hidden = true;
+
+    document.getElementById("reset").hidden = true;
+
+    document.getElementById("f").hidden = false;
+    document.getElementById("q").remove()
+    document.getElementById("steps").remove()
+    document.getElementById("sucessAlert").remove()
+
+
+}
 function test() {
     number2 = document.getElementById("number").value;
 
@@ -17,7 +31,7 @@ function test() {
     q.innerHTML = "Range: " + number1.toString() + ' - ' + number2.toString()
 
     document.getElementById("heading").appendChild(q)
-    document.getElementById("f").style.display = "none";
+    document.getElementById("f").hidden = true;
 
     console.log(number1)
     console.log(number2)
@@ -26,6 +40,8 @@ function test() {
 
     document.getElementById("ans").hidden = false;
 
+    document.getElementById("f").reset()
+    steps = 0;
     console.log(target)
 }
 
@@ -41,9 +57,19 @@ function guessCorrect() {
     q.innerHTML = "Target: " + number1.toString()
 }
 
+function refreshSteps() {
+    let s = document.getElementById("steps")
+    if (s === null) {
+        s = document.createElement('p')
+        s.id = "steps"
+    }
+    s.innerHTML = steps.toString()
+    document.getElementById("heading").appendChild(s)
+}
 
 function test1() {
 
+    refreshSteps()
     let guess = document.getElementById("guess");
 
     document.getElementById("guess").min = number1;
@@ -51,9 +77,6 @@ function test1() {
 
     let heading = document.getElementById("heading")
 
-    // console.log("Guess: " + guess.value)
-    // console.log("Lower Bound: " + number1.toString())
-    // console.log("Upper Bound: " + number2.toString())
 
     if (parseInt(guess.value) > number2){
 
@@ -92,12 +115,17 @@ function test1() {
     }
 
     else{
+        steps += 1;
+        refreshSteps()
+        //
+
         if (parseInt(guess.value) === target){
             number1 = parseInt(guess.value)
             number2 = parseInt(guess.value)
             let current = document.createElement("div")
             let alert = document.createElement("strong")
             current.className = "alert alert-success"
+            current.id = "sucessAlert"
             alert.innerHTML = "Nice"
 
             current.appendChild(alert)
@@ -105,6 +133,13 @@ function test1() {
 
             guessCorrect()
             document.getElementById("ans").reset()
+            document.getElementById("ans").hidden = true;
+
+            document.getElementById("reset").hidden = false;
+
+
+
+
         }
         else if (parseInt(guess.value) > target){
             number2 = parseInt(guess.value)
@@ -118,7 +153,6 @@ function test1() {
         }
     }
 
-    // console.log(guess)
 }
 
 
