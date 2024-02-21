@@ -85,6 +85,31 @@ const courses = [
         name: "Introduction To Artificial Intelligence",
         date: "2023 C-Term"
     },
+    {
+        courseNumber: "CS585 (Graduate Course)",
+        name: "Big Data Management",
+        date: "2023 Fall Semester"
+    },
+    {
+        courseNumber: "CS522 (Graduate Course)",
+        name: "Numerical Methods",
+        date: "2023 Fall Semester"
+    },
+    {
+        courseNumber: "CS5084 (Graduate Course)",
+        name: "Introduction To Algorithms: Design And Analysis",
+        date: "2024 Spring Semester"
+    },
+    {
+        courseNumber: "CS503 (Graduate Course)",
+        name: "Foundations Of Computer Science",
+        date: "2024 Spring Semester"
+    },
+    {
+        courseNumber: "CS548 (Graduate Course)",
+        name: "Knowledge Discovery and Data Mining",
+        date: "2024 Spring Semester"
+    },
 
 
 ]
@@ -121,7 +146,16 @@ window.onload = function (){
         let col = document.getElementById(year);
 
         let current = document.createElement("li");
-        current.innerHTML = item.courseNumber;
+
+        let name1 = ""
+
+        if (item.courseNumber.split(" ")[0] === "Major"){
+            name1 = item.courseNumber
+        }
+        else {
+            name1 = item.courseNumber.split(" ")[0]
+        }
+        current.innerHTML = name1;
 
 
         col.appendChild(current);
@@ -186,5 +220,7 @@ function yearTaken(date) {
         case "2022 A-Term - 2022 C-Term":
             return "senior";
 
+        default:
+            return "grad"
     }
 }
