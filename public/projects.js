@@ -9,7 +9,7 @@ const projects = [
             "Implementing responsive design to all platforms including phone, tablet, and other nonstandard displays, keeping all functionalities and features using MaterialUI and BootStrap.",
         ],
         photo: "photos/Projects/7Factor.jpg",
-        used: []
+        used: ["Java", "Spring", "PostgreSQL", "HTML/CSS", "JavaScript", "ReactJS", "Auth0"]
     },
     {
         projectName: "Hospital Equipment Tracking and Servicing Application",
@@ -73,25 +73,58 @@ window.onload = function (){
 
 
         let row = document.getElementById("row");
+        // row.style.alignItems = "stretch"
+        // row.className = "h-100"
 
 
         let col = document.createElement("div");
-        col.className = "col-xs-12 col-sm-12 col-md-4";
+        col.className = "col-xs-12 col-sm-12 col-md-4 h-100";
 
 
         let card = document.createElement("div");
-        card.className = "card"; // h-100
+        card.className = "card h-100"; // h-100
+        card.style.height = "100%";
 
         let name = document.createElement("h4");
         name.className = "card-title"
         name.innerHTML = item.projectName;
 
 
+
         let button = document.createElement("button");
-        button.id = "button";
-        button.className = "btn btn-secondary btn-lg btn-block text-truncate mt-auto";
+        button.id = ("button" + count.toString());
+        button.className = "btn btn-secondary btn-lg btn-block text-truncate ";
         button.type = "button";
-        button.onclick = function () {
+        button.style.margin = "0";
+        button.setAttribute("data-bs-toggle", "modal")
+        button.setAttribute("data-bs-target", "#modal1")
+        button.onclick = function() {
+            console.log(this.id)
+            document.getElementById("modalTitle").innerHTML = item.projectName
+            document.getElementById("modalBody").innerHTML = ""
+
+            let list = document.createElement("ul")
+            list.className = "list-group"
+            for (i in item.description){
+                let current = document.createElement("li")
+                current.className = "list-group-item"
+                current.innerHTML = item.description[i].toString()
+                list.appendChild(current)
+            }
+
+
+            list.style.paddingTop = "10%"
+
+            let img = document.createElement("img")
+            img.className = "img-fluid"
+            img.src = item.photo;
+            // img.style.width = "60%";
+            img.style.backgroundClip = "padding-box";
+            img.style.backgroundPosition = "center";
+
+
+            document.getElementById("modalBody").appendChild(img);
+            document.getElementById("modalBody").appendChild(list);
 
         }
 
@@ -105,13 +138,34 @@ window.onload = function (){
         img.style.backgroundClip = "padding-box";
         img.style.backgroundPosition = "center";
 
+        // <div className="card-footer">
+        //     <button type="button" className="btn btn-primary btn-sm btn-block" onClick="location.href = '';">BUY NOW </button>
+        // </div>
+
+        let cardFooter = document.createElement("div")
+        cardFooter.className = "card-footer"
+
+
         card.appendChild(img);
-        card.appendChild(name);
-        card.appendChild(button);
+
+        cardFooter.appendChild(name);
+        cardFooter.appendChild(button);
+        card.appendChild(cardFooter)
+
         col.appendChild(card);
         row.appendChild(col);
 
         count++;
     }
+
+}
+
+// function(this.id) {
+// }
+
+function popup(id) {
+
+
+
 
 }

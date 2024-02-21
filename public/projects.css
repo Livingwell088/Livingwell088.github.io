@@ -1,3 +1,15 @@
+body {
+    background-image: url("/photos/Education/c.jpg");
+    /*background-color: rgba(255, 255, 255, 0.486);*/
+    /*background-blend-mode: lighten;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+
+    /*opacity: 60%;*/
+}
+
 .card {
     display: block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -9,8 +21,9 @@
     /*min-height: 400px;*/
 
     height: 100%;
-    width: 100%;
-    text-align: center;
+    /*width: 100%;*/
+    width: 20vw;
+    text-align: left;
     /*vertical-align: top;*/
 }
 
@@ -65,3 +78,32 @@ button:hover, a:hover {
 p{
     font-size: 20px;
 }
+
+
+
+#education-text {
+    padding-top: 10vh;
+    padding-left: 25vh;
+    color: white;
+}
+
+#card {
+    bottom: 0;
+}
+
+#modal1 {
+    /*width: 80%;*/
+    align-content: center;
+}
+
+.img1 {
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+}
+
+
+
+
