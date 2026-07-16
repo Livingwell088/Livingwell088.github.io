@@ -1,0 +1,47 @@
+
+#About {
+    height: 100%;
+    border-bottom: 2px solid var(--border);
+}
+
+
+#about-left {
+    margin: 65px;
+    text-align: left;
+}
+
+#about-right {
+    margin: 25px;
+}
+
+/*.about-card {*/
+/*    background: transparent !important;*/
+/*    border: 1px solid var(--border-blue) !important;*/
+
+/*    text-align: left;*/
+
+/*    padding: 5px !important;*/
+/*    color: var(--text-primary) !important;*/
+/*}*/
+
+/*.about-card:hover {*/
+/*    border-color: var(--border-hover) !important;*/
+/*}*/
+
+/*.card-body {*/
+/*    padding-top: 0 !important;*/
+/*    color: var(--text-muted) !important;*/
+/*}*/
+
+#header {
+    color: var(--text-primary) !important;
+}
+
+#description {
+    color: var(--text-muted);
+}
+
+
+
+
+

@@ -1,0 +1,160 @@
+
+
+#Projects {
+    height: 100%;
+    border-bottom: 2px solid var(--border);
+}
+
+.projects-div {
+    margin: 65px;
+}
+
+.card-img {
+    padding-bottom: 10px;
+}
+
+.projects-div .glass-card .card-body {
+    padding-bottom: 0;
+}
+
+.glass-card .skill-pill {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 5px 2px 5px !important;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid var(--border-blue);
+    transition: 0.2s;
+}
+
+.glass-card .skill-pill:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.glass-card .image-wrapper {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+
+
+}
+
+.glass-card .card-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.projects-container {
+    display: flex;
+    gap: 24px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none ;
+
+    padding: 18px 8px 32px;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+}
+
+.projects-container::-webkit-scrollbar{
+    display:none;
+}
+
+
+.projects-container .glass-card{
+    flex: 0 0 380px;
+    scroll-snap-align: start;
+
+}
+
+
+.projects-wrapper {
+    position: relative;
+}
+
+/*Left Fade*/
+.projects-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+
+    background:
+            linear-gradient(
+                    to right,
+                    var(--bg-primary),
+                    transparent
+            );
+}
+
+/*Right Fade*/
+.projects-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 5;
+
+    background:
+            linear-gradient(
+                    to left,
+                    var(--bg-primary),
+                    transparent
+            );
+}
+
+
+/*Arrows*/
+.scroll-left, .scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+    background: var(--bg-primary);
+    backdrop-filter: blur(10px);
+    color: var(--primary);
+
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.scroll-left {
+    left: 12px;
+}
+
+.scroll-right {
+    right: 12px;
+}
+
+
+.scroll-left:hover,
+.scroll-right:hover{
+
+    transform:
+            translateY(-50%)
+            scale(1.1);
+
+    box-shadow:
+            0 0 25px rgba(0,207,255,.4);
+
+}

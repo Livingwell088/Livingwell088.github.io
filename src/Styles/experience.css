@@ -1,0 +1,96 @@
+
+
+#Experience {
+    height: 100%;
+    /*border-bottom: 2px solid var(--border);*/
+
+}
+
+.experience-div {
+    margin: 65px;
+}
+
+.experience-div .glass-card {
+    flex: 1;
+
+    overflow: hidden;
+
+    transition:
+            flex 0.45s ease,
+            transform .75s ease,
+            padding 0.7s,
+            min-height .35s ease;
+
+}
+
+.experience-div .glass-card:hover {
+    flex: 2.25;
+
+}
+
+.hover-text {
+
+    /*position: absolute;*/
+
+    max-height: 0;
+
+    opacity: 0;
+    overflow: hidden;
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.35s ease,
+        margin-top 0.3s ease;
+
+
+    margin-top: 0
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+
+    /*transform: translateY(100%);*/
+
+    /*transition: 0.35s*/
+
+}
+
+.experience-div .glass-card:hover .hover-text {
+    /*max-height: 200px;*/
+    max-height: fit-content;
+    opacity: 1;
+    margin-top: 18px;
+    transform: translateY(-6px);
+
+}
+
+.experience-div ul {
+    padding: 0;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 14px;
+    margin-bottom: 10px;
+
+    border-left: 2px solid var(--primary);
+
+    border-radius: 8px;
+}
+
+.experience-div .card-footer p {
+    text-align: left;
+    border: none;
+
+}
+
+
+
+
+
+
+
+
+

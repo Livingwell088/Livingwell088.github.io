@@ -1,0 +1,40 @@
+
+
+#Home {
+    height: 100%;
+    border-bottom: 2px solid var(--border);
+
+}
+
+#home-left {
+    margin: 65px;
+    text-align: left;
+}
+
+#hello {
+    color: var(--primary)
+}
+
+#name {
+    color: var(--text-primary)
+}
+
+#subtitle {
+    color: var(--text-muted)
+}
+
+#description {
+    color: var(--text-secondary)
+}
+
+.ai-tag{
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--primary-light);
+    background: rgba(30,144,255,0.08);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}

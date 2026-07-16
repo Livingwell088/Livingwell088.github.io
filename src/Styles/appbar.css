@@ -1,0 +1,92 @@
+
+
+/*body{*/
+/*    !*background-color: var(--bg-primary) !important;*!*/
+/*    background-color: white !important;*/
+/*}*/
+
+/*text {*/
+/*    color: var(--text-primary) !important;*/
+/*}*/
+
+#navbar{
+    background-color: var(--bg-primary);
+    justify-content: center;
+    padding-top: 2%;
+    bottom: 0;
+
+    border-bottom: 2px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+span{
+    color: var(--primary);
+}
+
+#logo{
+    color: var(--text-primary);
+    font-weight: 700
+}
+
+
+
+#navbar .nav-link {
+    color: var(--text-primary) !important;
+    transition: 0.3s;
+
+    position: relative;
+}
+
+#navbar .nav-link::after {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background: var(--primary-glow);
+    transition: width 0.25s ease;
+}
+
+#navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+#navbar .nav-link.active::after {
+    width: 100%;
+}
+
+#navbar .nav-link:hover {
+    color: var(--primary-glow) !important;
+}
+
+#navbar .nav-link.active {
+    color: var(--primary) !important;
+}
+
+
+
+/*.navtext::after {*/
+/*    */
+/*}*/
+
+/*.navtext:hover::after {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.navtext.active::after {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.navtext:hover {*/
+/*    color: var(--primary-glow) !important;*/
+/*}*/
+
+/*.navtext.active {*/
+/*    color: var(--primary) !important;*/
+/*}*/
