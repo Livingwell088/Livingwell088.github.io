@@ -10,7 +10,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 import logo from "../assets/Logo.png";
-import resume from "../../public/resume.pdf";
+import resume from "../assets/resume.pdf";
 
 
 export default function Footer() {
@@ -27,24 +27,15 @@ export default function Footer() {
                         display: "flex"
                     }} id="footer-left">
 
-                        <h3><span>NL</span> Nicholas Li</h3>
+                        <h3><img src={logo} style={{width: "50px", height: "50px"}} />  Nicholas Li</h3>
                         <p>Software Engineer | Master’s and Bachelor's in Computer Science | Pursuing Entry-Level Software Engineer Position | Building and Exploring AI</p>
 
-                        {/*<a*/}
-                        {/*    className="footer-button"*/}
-                        {/*    href="/resume.pdf"*/}
-                        {/*    target="_blank"*/}
-                        {/*    rel="noopener noreferrer"*/}
-                        {/*>*/}
-                        {/*    <span>VIEW RESUME</span>*/}
-                        {/*    <HiArrowLongRight />*/}
-                        {/*</a>*/}
+
                         <a className="footer-button"
                            href={resume}
                            target="_blank"
                            rel="noopener noreferrer"> VIEW RESUME <HiArrowLongRight style={{right: 0}} /></a>
-                        {/*<a className="footer-button"*/}
-                        {/*        onClick={() => window.open("mailto:Linicholas2019@gmail.com", "_blank")}>CONTACT ME <HiArrowLongRight /></a>*/}
+
                         <a
                             className="footer-button"
                             href="https://mail.google.com/mail/?view=cm&fs=1&to=Linicholas2019@gmail.com"
@@ -79,7 +70,7 @@ export default function Footer() {
 
                             <button className="connect-button" onClick={() => window.open("https://github.com/Livingwell088", "_blank")}><ImGithub /></button>
                             <button className="connect-button" onClick={() => window.open("https://www.linkedin.com/in/nicholas-li-781017193/", "_blank")}><BsLinkedin /></button>
-                            <button className="connect-button"><TfiEmail /></button>
+                            <button className="connect-button" onClick={() => window.open("https://mail.google.com/mail/?view=cm&fs=1&to=Linicholas2019@gmail.com")}><TfiEmail /></button>
                         </div>
 
                     </div>

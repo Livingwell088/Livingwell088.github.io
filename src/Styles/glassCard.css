@@ -81,53 +81,6 @@
 }
 
 
-/*.glass-card::before {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 8%;*/
-/*    width: 58%;*/
-/*    height: 2px;*/
-
-/*    background: linear-gradient(*/
-/*            90deg,*/
-/*            transparent,*/
-/*            rgba(66, 184, 255, 0.45),*/
-/*            var(--primary-bright),*/
-/*            rgba(66, 184, 255, 0.45),*/
-/*            transparent*/
-/*    );*/
-
-/*    box-shadow:*/
-/*            0 0 8px rgba(0, 207, 255, 0.7),*/
-/*            0 0 18px rgba(0, 207, 255, 0.3);*/
-/*}*/
-
-
-/*Glow Orb*/
-/*.glass-card::after {*/
-/*    content: "";*/
-/*    position: absolute;*/
-
-/*    width: 170px;*/
-/*    height: 170px;*/
-/*    right: -70px;*/
-/*    top: -70px;*/
-
-/*    border-radius: 50%;*/
-
-/*    background: radial-gradient(*/
-/*            circle,*/
-/*            rgba(66, 184, 255, 0.18),*/
-/*            rgba(30, 144, 255, 0.06) 45%,*/
-/*            transparent 72%*/
-/*    );*/
-
-/*    filter: blur(32px);*/
-/*    pointer-events: none;*/
-
-/*}*/
-
 .glass-card::after {
     content: "";
     position: absolute;
@@ -159,13 +112,31 @@
             0 18px 50px rgba(0,0,0,.45);
 }
 
+/*Right Glow Line*/
+.glass-card .vertical-line {
+    position: absolute;
+
+    right: 0;
+    top: 42%;
+
+    width: 2px;
+    height: 40%;
+
+    border-radius: 2px;
+
+    background: linear-gradient(
+            180deg,
+            transparent,
+            var(--primary),
+            transparent
+    );
+
+    box-shadow:
+            0 0 10px var(--primary-glow),
+            0 0 25px var(--primary-glow);
 
 
-
-
-
-
-
+}
 
 
 

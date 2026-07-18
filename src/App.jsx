@@ -15,7 +15,8 @@ import Contact from "./Sections/Contact.jsx";
 import './Styles/fonts.css';
 import Footer from "./Sections/Footer.jsx";
 
-import lightning from "./assets/test-lightning.png"
+
+import lightning from "./assets/Lightning.png"
 
 
 function App() {
@@ -35,26 +36,28 @@ function App() {
 
     return (
         <>
+
             <Appbar />
+            <div
+                className="app"
+                style={{
+                    "--lightning-image": `url(${lightning})`
+                }}
+            >
+                <main>
+                    <Home />
+                    <About />
+                    <Skills />
+                    <Projects />
+                    <Experience />
+                </main>
 
-            <div className="site-wrapper">
+                <Footer />
 
-                <div className="lightning-side lightning-left"
-                     style={{backgroundImage: `url(${lightning}`}} />
-
-                <div className="lightning-side lightning-right"
-                     style={{backgroundImage: `url(${lightning}`}} />
             </div>
 
-            <main>
-                <Home />
-                <About />
-                <Skills />
-                <Projects />
-                <Experience />
-            </main>
 
-            <Footer />
+
 
         </>
     );

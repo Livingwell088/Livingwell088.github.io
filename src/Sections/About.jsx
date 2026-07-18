@@ -53,6 +53,7 @@ export default function About() {
                         gridTemplateColumns: "1fr 1fr"
                     }}>
                         <Card className="glass-card">
+                        <div className="vertical-line"></div>
                             <Card.Title>
                                 <TbSchool />
                                 Education
@@ -69,6 +70,7 @@ export default function About() {
                         </Card>
 
                         <Card className="glass-card">
+                        <div className="vertical-line"></div>
                             <Card.Title>
                                 <RiFocus2Line />
                                 Focus
@@ -82,6 +84,7 @@ export default function About() {
                         </Card>
 
                         <Card className="glass-card">
+                        <div className="vertical-line"></div>
                             <Card.Title>
                                 <TbCodeCircle2 />
                                 Interests
@@ -97,6 +100,7 @@ export default function About() {
                         </Card>
 
                         <Card className="glass-card">
+                        <div className="vertical-line"></div>
                             <Card.Title>
                                 <GoGoal />
                                 Goals

@@ -12,12 +12,15 @@ export default function Skills() {
                 <h3 style={{
                     color: "var(--text-primary)"
                 }}>Skills and Technologies</h3>
+
                 <div className="grid-3" style={{
                     display: "grid",
                     gap: "18px",
                     gridTemplateColumns: "1fr 1fr 1fr"
                 }}>
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
+
                         <Card.Title>
 
                             <h3><TbSchool />Languages</h3>
@@ -48,6 +51,7 @@ export default function Skills() {
                     </Card>
 
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
                         <Card.Title>
                             <h3><TbSchool />Frontend</h3>
                         </Card.Title>
@@ -71,6 +75,7 @@ export default function Skills() {
                     </Card>
 
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
                         <Card.Title>
                             <h3><TbSchool />Backend</h3>
                         </Card.Title>
@@ -94,6 +99,7 @@ export default function Skills() {
                     </Card>
 
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
                         <Card.Title>
                             <h3><TbSchool />AI</h3>
                         </Card.Title>
@@ -119,6 +125,7 @@ export default function Skills() {
                     </Card>
 
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
                         <Card.Title>
                             <h3><TbSchool />Databases</h3>
                         </Card.Title>
@@ -142,6 +149,7 @@ export default function Skills() {
                     </Card>
 
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
                         <Card.Title>
                             <h3><TbSchool />Tools & Deployment</h3>
                         </Card.Title>

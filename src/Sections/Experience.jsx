@@ -33,6 +33,7 @@ export default function Experience() {
                 }}>
 
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
                         <Card.Title as="h4">
                             <img src={shaw} style={{
                                 width: "50px",
@@ -72,6 +73,7 @@ export default function Experience() {
                     </Card>
 
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
                         <Card.Title as="h4">
                             <img src={ming} style={{
                                 width: "50px",
@@ -113,6 +115,7 @@ export default function Experience() {
                     </Card>
 
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
                         <Card.Title as="h4">
                             <img src={usps} style={{
                                 width: "50px",
@@ -143,6 +146,7 @@ export default function Experience() {
                     </Card>
 
                     <Card className="glass-card">
+                        <div className="vertical-line"></div>
                         <Card.Title as="h4">
                             <img src={ai} style={{
                                 width: "50px",

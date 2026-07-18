@@ -158,3 +158,79 @@
             0 0 25px rgba(0,207,255,.4);
 
 }
+
+
+.project-modal {
+    color: var(--text-primary) !important;
+
+    background: var(--bg-card) !important;
+
+    border: 3px solid var(--border-blue) !important;
+    border-radius: 18px;
+
+    box-shadow:
+            0 0 10px var(--border-hover),
+            0 0 55px var(--border-blue);
+}
+
+.project-modal .modal-header,
+.project-modal .modal-footer {
+    border-color: var(--text-primary) !important;
+}
+
+.project-modal .btn-close {
+    filter: invert(1);
+}
+
+.project-modal-image {
+    display: block;
+
+    width: 100%;
+    max-height: 380px;
+
+    margin-bottom: 24px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.project-modal-description {
+    color: var(--text-secondary) !important;
+}
+
+.modal-primary-button,
+.modal-secondary-button {
+    text-decoration: none;
+}
+
+.modal-primary-button {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.modal-secondary-button {
+    background: transparent !important;
+    border-color: var(--primary) !important;
+    color: var(--text-primary) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

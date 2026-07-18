@@ -65,7 +65,7 @@ export default function Appbar() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                     <Navbar.Brand id="logo">
-                        <h3><img src={logo} style={{width: "75px", height: "75px"}} /> Nicholas Li</h3>
+                        <h3><img src={logo} style={{width: "65px", height: "65px"}} /> Nicholas Li</h3>
                     </Navbar.Brand>
 
                     <Navbar.Collapse id="basic-navbar-nav">

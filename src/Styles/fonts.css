@@ -23,10 +23,10 @@
 
 
 .teko{
-    font-family: "Teko", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
+    font-family: "Teko", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
 }
 
 .kolker-brush-regular {
