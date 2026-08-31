@@ -78,6 +78,20 @@ export default function Projects() {
             liveUrl: "https://minghousema.com/",
             githubUrl: "https://github.com/Livingwell088/MingHouseWebsite"
         },
+        {
+            title: "Delivery Route Planner",
+            image: loading,
+            modalimg: loading,
+            description: "Work In Progress. I want to build an app that can capture the address and time off of a receipt and be able to calculate the best route to take for best efficiency while not delaying each order.",
+            technologies: ["React", "Spring Boot", "PostgreSQL"],
+            details: (
+                <>
+                    <p>Work in Progress</p>
+                </>
+
+            ),
+            githubUrl: "https://github.com/Livingwell088/Delivery-Route-Planner"
+        },
 
         {
             title: "AI Job Description & Resume Matching Agent",
