@@ -10,7 +10,6 @@ import { TfiEmail } from "react-icons/tfi";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 import logo from "../assets/Logo.png";
-import resume from "../assets/resume.pdf";
 
 
 export default function Footer() {
@@ -32,7 +31,7 @@ export default function Footer() {
 
 
                         <a className="footer-button"
-                           href={resume}
+                           href="/resume.pdf"
                            target="_blank"
                            rel="noopener noreferrer"> VIEW RESUME <HiArrowLongRight style={{right: 0}} /></a>
 

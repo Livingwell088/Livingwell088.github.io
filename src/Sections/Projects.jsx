@@ -14,8 +14,8 @@ import loading from "../assets/Loading.jpg"
 import React, {useRef} from "react";
 import hospitalFront from "../assets/hosFront.png"
 
-import staffingReport from "../assets/7Factor Report.pdf"
-
+import mingbotdemo from "../assets/MingBot Demo.png"
+import mingbot from "../assets/MingBot.png"
 
 export default function Projects() {
 
@@ -43,6 +43,21 @@ export default function Projects() {
 
 
     const projects = [
+        {
+            title: "Ming Bot - Restaurant AI Retrieval Assistant",
+            image: mingbotdemo,
+            modalimg: mingbotdemo,
+            description:
+                "A retrieval-augmented generation (RAG) assistant that answers customer questions about restaurant menu, pricing, hours, and information.",
+            technologies: [],
+            details: (<>
+                <p>Developed a FastAPI backend and vector database using ChromaDB and OpenAI embeddings to store, retrieve, and generate responses based on relevant retrieved context.</p>
+                <p>Integrated a React chat user interface into the restaurant’s online website, enabling customers to interact with the assistant directly when browsing the website.</p>
+                <p>Implemented conversation routing, follow-up checks and handling, and fallback logic for queries that may be ambiguous, out-of-scope or confusing.</p>
+            </>),
+            liveUrl: "https://ai-assistant-rho-eight.vercel.app/",
+            githubUrl: "https://github.com/Livingwell088/AI-Assistant"
+        },
         {
             title: "Ming House Online Ordering Website",
             image: mingHouse,
@@ -104,20 +119,6 @@ export default function Projects() {
             githubUrl: "https://github.com/Livingwell088/Hospital-Servicing-Application"
         },
         {
-            title: "Ming House AI Assistant",
-            image: loading,
-            modalimg: loading,
-            description:
-                "Work In Progress. AI Assistant to help users with ordering, and answering customer question and potentially help take phone orders from customers.",
-            technologies: [],
-            details: (<>
-                <p>Work In Progress</p>
-                <p>AI Assistant to help users with ordering, and answering customer question and potentially help take phone orders from customers</p>
-            </>),
-            liveUrl: "",
-            githubUrl: ""
-        },
-        {
             title: "7Factor Staffing Tool Platform",
             image: staffing,
             modalimg: staffing,
@@ -137,7 +138,7 @@ export default function Projects() {
             ),
             liveUrl: "",
             githubUrl: "",
-            reportURL: staffingReport
+            reportURL: "/7Factor Report.pdf"
         },
         {
             title: "Github(by) Express",
@@ -201,12 +202,11 @@ export default function Projects() {
 
                     <div className="projects-container" ref={projectsRef}>
 
-                        {projects.map((project, i) => (
-                             <Card className="glass-card" onClick={() => setSelectedProject(project)}>
+                        {projects.map((project) => (
+                             <Card key={project.title} className="glass-card" onClick={() => setSelectedProject(project)}>
                                  <div className="vertical-line"></div>
                                 <div
                                     className="image-wrapper"
-                                    key={project.title}
                                 >
                                     <Card.Img src={project.image} />
                                 </div>
